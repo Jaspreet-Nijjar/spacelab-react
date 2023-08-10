@@ -4,10 +4,10 @@ import About from "./pages/about/About";
 import Blog from "./pages/Blog/Blog";
 import Discovery from "./pages/discovery/Discovery";
 import Glossary from "./pages/Glossary/Glossary";
-import Home from "./pages/home/Home";
+import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
-import Podcast from "./pages/Podcast/Podcast";
+import Podcast from "./pages/podcast/Podcast";
 import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
 import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
 import BlogArchives from "./components/BlogArchives/BlogArchives";
@@ -16,7 +16,8 @@ import {
 	DonateLandingPage,
 	DonatePaymentPage,
 	DonateSuccessPage,
-} from "pages/landingPages/donate/";
+} from "./pages/landingPages/donate/Donate";
+
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
 import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
@@ -43,19 +44,20 @@ export default function Main() {
 			<Route exact path="/cookie-policy" component={CookiePolicy} />
 			<Route exact path="/privacy-policy" component={PrivacyPolicy} />
 			{/* landing page routing must go BEFORE the catch all '/' route*/}
+
 			<Route
 				exact
-				path="/pages/landingPages/donate"
+				path="/campaigns/donate"
 				component={DonateLandingPage}
 			/>
 			<Route
 				exact
-				path="/pages/landingPages/donate"
+				path="/campaigns/donate/donate-payment"
 				component={DonatePaymentPage}
 			/>
 			<Route
 				exact
-				path="/pages/landingPages/donate"
+				path="/campaigns/donate/donate-success"
 				component={DonateSuccessPage}
 			/>
 			<Route exact path="/campaigns/endorseUs" component={EndorseUs} />
